@@ -29,6 +29,11 @@ func GetPage() Page {
 	err:=o.Read(&p)
 	fmt.Println(err)
 	return p
+}
 
+func UpdatePage(){
+	p:=Page{Id: 1, Email: "myemail2131",}
+	o:=orm.NewOrm()
+	o.Update(&p,"Email")
 
 }

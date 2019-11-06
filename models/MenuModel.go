@@ -1,8 +1,5 @@
 package models
 
-import (
-	"github.com/astaxie/beego/orm"
-)
 type MenuModel struct {
 	Mid int `orm:"pk;auto"`
 	Parent int
@@ -17,6 +14,6 @@ type MenuTree struct {
 }
 
 func (m *MenuModel) TableName() string {
-	return "x"
+	return "xcms_menu"
 }
 
